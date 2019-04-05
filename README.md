@@ -1,6 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Task for Optimove - Weather forcast
 
-## Available Scripts
+![Screenshot the app screen](https://github.com/minus199/optimove-weather-frontend/blob/master/screenshot.png)
+
 
 In the project directory, you can run:
 
