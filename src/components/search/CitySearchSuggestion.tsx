@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react';
+import React from 'react';
 import parse from 'autosuggest-highlight/parse';
 import match from 'autosuggest-highlight/match';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -24,8 +24,6 @@ export type SearchSuggestionTextFieldProps = Suggestion | TextFieldProps
  * @param suggestion 
  */
 function renderCitySuggestionItem(suggestion: Suggestion, { query, isHighlighted }: { query: string, isHighlighted: boolean }) {
-    console.log("@@@@", arguments);
-    
     const matches = match(suggestion.name, query);
     const parts = parse(suggestion.name, matches).map((part, index) =>
         part.highlight ?

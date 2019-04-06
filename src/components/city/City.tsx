@@ -14,7 +14,7 @@ const City = (props: WeatherResponse & { onNeedWeatherRefresh: (city: string, is
             {weather}
             <CardActions>
                 <Button size="small" color="primary" onClick={() => props.onNeedWeatherRefresh(props.location.name, !!props.isSpotlight)}>Refresh</Button>
-                <Typography variant="caption" color="textSecondary">Last update: {new Date(props.current ? props.current.last_updated : undefined).toUTCString()}</Typography>
+                <Typography variant="caption" color="textSecondary">Updated: {new Date(props.current ? props.current.last_updated : undefined).toUTCString()}</Typography>
             </CardActions>
         </Card>
     );

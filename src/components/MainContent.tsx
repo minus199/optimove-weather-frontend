@@ -17,14 +17,17 @@ function MainContent(props: MainContentProps) {
   const { topCitiesData, searchHistoryState, spotlightCityData, onNeedWeatherRefresh } = props
   return (
     <Grid container>
+      {/* The top list of cities */}
       <Grid item xs={12}>
         <Cities cities={topCitiesData} fetchWeatherHandler={onNeedWeatherRefresh} />
       </Grid>
 
+      {/* Search history */}
       <Grid item xs={6}>
         <SearchHistory history={searchHistoryState} onItemClick={onNeedWeatherRefresh} />
       </Grid>
 
+      {/* Selected city from search */}
       <Grid item xs={6}>
         <City {...{ onNeedWeatherRefresh, ...spotlightCityData }} />
       </Grid>

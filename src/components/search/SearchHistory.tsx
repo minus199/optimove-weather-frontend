@@ -29,7 +29,7 @@ function SearchHistory(props: SearchHistoryProps) {
     const historyItems = props.history.map((item, idx: number) =>
         <SearchHistoryItem key={`search-history-${idx}`} {...item} onItemClick={props.onItemClick} />)
 
-    return (<Grid style={{ height: "55vh", overflow: "auto" }} item xs={12} md={6}>
+    return (<Grid style={{ height: "45vh", overflow: "auto" }} item xs={12} md={6}>
         <Typography variant="h6">Search History</Typography>
         <div><List>{historyItems}</List></div>
     </Grid>)
